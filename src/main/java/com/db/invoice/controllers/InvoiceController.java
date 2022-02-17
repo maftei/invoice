@@ -2,6 +2,8 @@ package com.db.invoice.controllers;
 
 
 import com.db.invoice.models.Invoice;
+import com.db.invoice.services.InvoiceService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,9 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class InvoiceController {
 
-    @PostMapping(value="/createInvoice")
-    public void createInvoice(@RequestBody Invoice invoice){
+    @Autowired
+    InvoiceService invoiceService;
 
+
+    @PostMapping(value="/createInvoice")
+    public Invoice createInvoice(@RequestBody Invoice invoice){
+        return invoiceService.createinvoice(invoice);
     }
 
 
