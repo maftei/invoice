@@ -15,7 +15,7 @@ public class InvoiceController {
     InvoiceService invoiceService;
 
 
-    @PostMapping(value="/createInvoice")
+    @PostMapping(value="/ ")
     public Invoice createInvoice(@RequestBody Invoice invoice){
         return invoiceService.createinvoice(invoice);
     }
