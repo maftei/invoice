@@ -16,4 +16,9 @@ public class InvoiceService {
         Invoice invoiceDb= invoiceRepository.save(invoice);
         return invoice;
     }
+
+    public Iterable<Invoice> createInvoices(Iterable<Invoice> invoice) {
+        Iterable<Invoice> dbInvoice= invoiceRepository.saveAll(invoice);
+        return dbInvoice;
+    }
 }
