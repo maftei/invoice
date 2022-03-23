@@ -78,5 +78,11 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>a0uiczgdsmac4-artifactory-primary-0-releases</name>
+			<url>https://homeenv.jfrog.io/artifactory/razvanartifactory-libs-release-local</url>
+		</repository>
+	</distributionManagement>
 </project>

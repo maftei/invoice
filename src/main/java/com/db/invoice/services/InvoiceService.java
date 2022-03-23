@@ -21,4 +21,7 @@ public class InvoiceService {
         Iterable<Invoice> dbInvoice= invoiceRepository.saveAll(invoice);
         return dbInvoice;
     }
+
+    public void updateInvoice(Long invoiceId, Invoice invoice) {
+    }
 }
