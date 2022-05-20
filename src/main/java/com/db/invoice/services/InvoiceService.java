@@ -47,4 +47,8 @@ public class InvoiceService {
         }
         return null;
     }
+
+    public Iterable<Invoice> getAllInvoices() {
+        return invoiceRepository.findAll();
+    }
 }

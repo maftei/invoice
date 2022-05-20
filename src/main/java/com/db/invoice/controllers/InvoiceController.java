@@ -29,4 +29,12 @@ public class InvoiceController {
     public void updateInvoice(@PathVariable ("invoiceId") Long invoiceId, @RequestBody Invoice invoice){
             invoiceService.updateInvoice(invoiceId, invoice);
     }
+
+    @GetMapping("/allproductnames")
+    public Iterable<Invoice> retrieveInvoice() {
+        return invoiceService.getAllInvoices();
+    }
+
+
+
 }
